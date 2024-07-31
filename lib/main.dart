@@ -5,10 +5,8 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final check = await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  print('Firebase Initialized: $check');
   runApp(const MyApp());
 }
 
@@ -18,7 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Localizations Sample App',
+      debugShowCheckedModeBanner: false,
+      title: 'COGITO APP',
       home: MyHomePage(),
     );
   }
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-  final String title = 'Localizations Sample App';
+  final String title = 'COGITO';
 
   @override
   Widget build(BuildContext context) {
