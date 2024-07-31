@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445233198990",
+    "project_id": "cogito-d1f6b",
+    "storage_bucket": "cogito-d1f6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445233198990:android:4a4cf2cca544f2e54296df",
+        "android_client_info": {
+          "package_name": "com.example.cogito"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYPfAYu9jXrA1oXLcCx4ZXKGKlHhzPAUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
