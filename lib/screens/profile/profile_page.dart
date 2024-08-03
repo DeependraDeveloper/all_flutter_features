@@ -336,154 +336,160 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Widget yourProfileStatus(BuildContext context) {
-    return ListTile(
-      tileColor: Colors.white,
-      shape: RoundedRectangleBorder(
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      leading: CircleAvatar(
-        radius: 20,
-        backgroundColor: Colors.grey[200],
-        child: const Icon(
-          Icons.person_outline,
-          size: 30,
-          color: Colors.grey,
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 20,
+          backgroundColor: Colors.grey[200],
+          child: const Icon(
+            Icons.person_outline,
+            size: 30,
+            color: Colors.grey,
+          ),
         ),
-      ),
-      title: const Text(
-        'Your Profile',
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w400,
+        title: const Text(
+          'Your Profile',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
+          ),
         ),
-      ),
-      trailing: Container(
-        width: 80,
-        height: 20,
-        padding: const EdgeInsets.symmetric(horizontal: 4),
-        decoration: BoxDecoration(
-          color: Colors.red[100],
-          borderRadius: BorderRadius.circular(6),
-        ),
-        child: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(
-              '32%',
-              style: TextStyle(
-                fontSize: 8,
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
+        trailing: Container(
+          width: 80,
+          height: 20,
+          padding: const EdgeInsets.symmetric(horizontal: 4),
+          decoration: BoxDecoration(
+            color: Colors.red[100],
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                '32%',
+                style: TextStyle(
+                  fontSize: 8,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Text(
-              'completed',
-              style: TextStyle(
-                fontSize: 8,
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
+              Text(
+                'completed',
+                style: TextStyle(
+                  fontSize: 8,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 
   Widget vegMode(BuildContext context) {
-    return ListTile(
-      tileColor: Colors.white,
-      shape: RoundedRectangleBorder(
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      leading: CircleAvatar(
-        radius: 20,
-        backgroundColor: Colors.grey[200],
-        child: const Icon(
-          Icons.emoji_food_beverage_rounded,
-          size: 30,
-          color: Colors.green,
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 20,
+          backgroundColor: Colors.grey[200],
+          child: const Icon(
+            Icons.emoji_food_beverage_rounded,
+            size: 30,
+            color: Colors.green,
+          ),
         ),
-      ),
-      title: const Text(
-        'Veg Mode',
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w400,
+        title: const Text(
+          'Veg Mode',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
+          ),
         ),
-      ),
-      trailing: Switch.adaptive(
-        activeColor: Colors.green,
-        activeTrackColor: Colors.green[100],
-        inactiveThumbColor: Colors.white,
-        inactiveTrackColor: Colors.grey[350],
-        trackOutlineWidth: const WidgetStatePropertyAll(0),
-        value: isVeg,
-        onChanged: (bool value) {
-          setState(() {
-            isVeg = value;
-          });
-        },
+        trailing: Switch.adaptive(
+          activeColor: Colors.green,
+          activeTrackColor: Colors.green[100],
+          inactiveThumbColor: Colors.white,
+          inactiveTrackColor: Colors.grey[350],
+          trackOutlineWidth: const WidgetStatePropertyAll(0),
+          value: isVeg,
+          onChanged: (bool value) {
+            setState(() {
+              isVeg = value;
+            });
+          },
+        ),
       ),
     );
   }
 
   Widget yourRating(BuildContext context) {
-    return ListTile(
-      tileColor: Colors.white,
-      shape: RoundedRectangleBorder(
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      leading: CircleAvatar(
-        radius: 20,
-        backgroundColor: Colors.grey[200],
-        child: const Icon(
-          Icons.star_border_outlined,
-          size: 30,
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 20,
+          backgroundColor: Colors.grey[200],
+          child: const Icon(
+            Icons.star_border_outlined,
+            size: 30,
+            color: Colors.grey,
+          ),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              'Your Rating',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            Container(
+              width: 60,
+              height: 30,
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text(
+                    '4.6',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.yellow[700],
+                    size: 20,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        trailing: const Icon(
+          Icons.arrow_forward_ios,
           color: Colors.grey,
         ),
-      ),
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const Text(
-            'Your Rating',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          Container(
-            width: 60,
-            height: 30,
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Text(
-                  '4.6',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow[700],
-                  size: 20,
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-      trailing: const Icon(
-        Icons.arrow_forward_ios,
-        color: Colors.grey,
       ),
     );
   }
